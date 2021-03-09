@@ -7,16 +7,17 @@ import {
     StatusBar
 } from 'react-native';
 
-import color from '../config/color';
+import colors from '../config/colors';
+
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 function StatusScreen(props) {
     return( 
-
+        
         <View style={style.background}>
-          <View style={style.leftComp}/>
-          <View style={style.rightComp}/>
-          <Image
-            
+          <MaterialCommunityIcons name="close" size={50} color="white" style={style.leftComp}/> 
+          <MaterialCommunityIcons name="trash-can-outline" size={50} color="white" style={style.rightComp}/>
+          <Image           
               resizeMode ="contain"
              style={style.backgroundImage}
               source={require('../assets/logo.png')}
@@ -33,26 +34,18 @@ const style = StyleSheet.create({
     background: {
       flex : 1,
       flexDirection : 'column-reverse',
-      backgroundColor: color.black,
+      backgroundColor: colors.black,
       alignItems : 'center',
       
     },
-    rightComp :{
-        backgroundColor: color.primary,
-        width:50,
-        height:50,
+    rightComp :{       
         top:40,
-        left: 30,
-        
+        right: 30,      
         position: "absolute",
     },
-    leftComp :{
-        backgroundColor: color.secondary,
-        width:50,
-        height:50,
+    leftComp :{      
         top:40,
-        right: 30,
-        
+        left: 30,      
         position: "absolute",
     },
     backgroundImage :{
