@@ -1,11 +1,11 @@
 import React from 'react';
-import {View, StyleSheet, Image,Text} from 'react-native';
+import {View, StyleSheet, Image,Text, TouchableOpacity} from 'react-native';
 
 import colors from '../config/colors';
 
 function Card({title, subtitle, image}) {
     return (
-        <View style={style.card}>
+        <TouchableOpacity style={style.card}>
             <Image source={image} style={style.image}/>
             <View style={style.detailContainer}>
                 <Text style={style.title}>{title}</Text>
@@ -13,7 +13,7 @@ function Card({title, subtitle, image}) {
             </View>
             
 
-        </View>
+        </TouchableOpacity>
     );
 }
 
@@ -23,9 +23,10 @@ const style=StyleSheet.create({
     card :{
       backgroundColor : colors.background,
       borderRadius: 15,
-      marginBottom: 20,
-      padding:20,
-      overflow:'hidden'
+      
+      margin:20,
+      overflow:'hidden',
+      //flex: 0.4,
       
     },
     image: {

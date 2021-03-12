@@ -1,7 +1,6 @@
 import React from 'react';
-import { FlatList, SafeAreaView, StyleSheet} from 'react-native';
+import { FlatList} from 'react-native';
 
-import Constants from "expo-constants";
 
 import ListItem from '../components/ListItem';
 import Screen from '../components/Screen';

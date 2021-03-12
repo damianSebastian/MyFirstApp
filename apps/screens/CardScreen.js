@@ -1,0 +1,53 @@
+import React from 'react';
+import { FlatList } from 'react-native';
+
+import Card from '../components/Card';
+
+import Screen from '../components/Screen';
+
+const messages = [
+    {
+        id:1,
+        title:"Mancare 1",
+        subtitle:"Descriere 1",
+        image:require('../assets/logo.png'),
+    },
+    {
+        id:2,
+        title:"mancare 2",
+        subtitle:"descriere 2",
+        image:require('../assets/logo.png'),
+    },
+    {
+        id:3,
+        title:"mancare 3",
+        subtitle:"descriere 3",
+        image:require('../assets/logo.png')
+    },
+    {
+        id:4,
+        title:"Mancare 4",
+        subtitle:"Descriere 4",
+        image:require('../assets/logo.png'),
+    },
+]
+
+function CardScreen(props) {
+    return (
+        <Screen>
+            <FlatList
+                data={messages}
+                keyExtractor={message => message.id.toString()}
+                renderItem={({item}) =>
+                <Card
+                    title={item.title}
+                    subtitle={item.subtitle}
+                    image={item.image}/>} />
+
+        </Screen>
+        
+    );
+}
+
+
+export default CardScreen;
