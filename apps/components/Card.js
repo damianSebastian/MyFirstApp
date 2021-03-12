@@ -21,9 +21,10 @@ export default Card;
 
 const style=StyleSheet.create({
     card :{
-      backgroundColor : colors.white,
+      backgroundColor : colors.background,
       borderRadius: 15,
       marginBottom: 20,
+      padding:20,
       overflow:'hidden'
       
     },
@@ -35,14 +36,17 @@ const style=StyleSheet.create({
     title:{
         fontSize: 25,
         fontWeight : 'bold',
-        margin:5,
+        marginTop:5,
+        color:colors.text,
     },
     subtitle:{
         fontSize: 20,
-        color:'cyan',
+        marginTop:5,
+        color:colors.gray,
+        
 
     },
     detailContainer:{
-        padding:10,
+      padding:10,
     }
   })

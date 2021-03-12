@@ -11,12 +11,12 @@ import colors from '../config/colors';
 
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
-function StatusScreen(props) {
+function StatusScreen({inputColor="button"}) {
     return( 
         
         <View style={style.background}>
-          <MaterialCommunityIcons name="close" size={50} color="white" style={style.leftComp}/> 
-          <MaterialCommunityIcons name="trash-can-outline" size={50} color="white" style={style.rightComp}/>
+          <MaterialCommunityIcons name="close" size={50} color={inputColor} style={style.leftComp}/> 
+          <MaterialCommunityIcons name="trash-can-outline" size={50} color={inputColor} style={style.rightComp}/>
           <Image           
               resizeMode ="contain"
              style={style.backgroundImage}
@@ -34,7 +34,7 @@ const style = StyleSheet.create({
     background: {
       flex : 1,
       flexDirection : 'column-reverse',
-      backgroundColor: colors.black,
+      backgroundColor: colors.background,
       alignItems : 'center',
       
     },

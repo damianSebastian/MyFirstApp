@@ -14,21 +14,16 @@ import MyColors from '../config/colors';
 function WellcomeScreen(props) {
   return(
       
-        <ImageBackground 
-        resizeMode = "contain"
-        style={firstStyle.background}
-        source={require('../assets/logo.png')}
-        blurRadius={2}
-        
+        <View style={firstStyle.background}
         >
           <View style ={firstStyle.logoAndText}>
             <Image style={firstStyle.logo} source={require('../assets/logo.png')}></Image>
             <Text style={firstStyle.text}>O aplicatie impresionanta!</Text>
           </View>
           <MyButton title="Login"/>
-          <MyButton title="Register" color="secondary"/>
+          <MyButton title="Register" />
   
-        </ImageBackground>
+        </View>
   
       )
 }
@@ -43,6 +38,8 @@ const firstStyle = StyleSheet.create ({
       height : "100%",
       justifyContent: 'flex-end',
       alignItems : 'center',
+      backgroundColor: colors.background,
+      
       
     },
     
@@ -60,6 +57,7 @@ const firstStyle = StyleSheet.create ({
       fontSize : 20,
       fontWeight : 'bold',  
       margin : 10, 
+      color : colors.text,
       
     },
   })

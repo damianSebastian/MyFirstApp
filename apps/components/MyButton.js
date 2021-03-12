@@ -7,7 +7,7 @@ import {
     } from 'react-native';
 import colors from'../config/colors';
 
-function MyButton({title, color ="primary"}) {
+function MyButton({title, color ="button"}) {
     return(
       
           <TouchableOpacity style={[buttonStyel.LoginButton, {backgroundColor: colors[color]}]} onPress={() => Alert.alert(title)}>
@@ -26,7 +26,7 @@ const buttonStyel = StyleSheet.create ({
     LoginButton : {
       width : '90%',
       height : 50,
-      backgroundColor : colors.primary,
+      backgroundColor: colors.button,
       borderRadius : 25,
       margin : 10,
       justifyContent : 'center',
@@ -36,6 +36,6 @@ const buttonStyel = StyleSheet.create ({
     buttonText : {
       fontSize : 25,
       fontWeight : 'bold',
-      color : 'white',
+      color : colors.lightText,
     }
   })

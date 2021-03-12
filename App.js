@@ -7,16 +7,12 @@ import {
 
 import Card from './apps/components/Card';
 import PresentaionScreen from './apps/components/PresentationProductScreen';
+import StatusScreen from './apps/screens/StatusScreen';
+import WellcomeScreen from './apps/screens/WellcomeScreen';
+import MessagesScreen from './apps/screens/MessagesScreen';
 
 export default function App() {
   return(
-       <PresentaionScreen
-          image={require('./apps/assets/logo.png')}
-          profileImage={require('./apps/assets/logo.png')}
-          title="Propriul logo"
-          subtitle="$100"
-          name="Avram Sebastian"
-          nameDetalis="Cel mai smecher creator de aplicatii"
-       />
+      <MessagesScreen />
   )
 }
